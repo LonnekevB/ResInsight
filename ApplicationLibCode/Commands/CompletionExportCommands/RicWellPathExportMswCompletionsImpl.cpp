@@ -855,9 +855,9 @@ RicMswExportInfo
     exportInfo.setLinerDiameter( mswParameters->linerDiameter( unitSystem ) );
     exportInfo.setRoughnessFactor( mswParameters->roughnessFactor( unitSystem ) );
 
-    double maxSegmentLength          = enableSegmentSplitting ? mswParameters->maxSegmentLength()
-                                                              : std::numeric_limits<double>::infinity();
-    bool   foundSubGridIntersections = false;
+    double maxSegmentLength = enableSegmentSplitting ? mswParameters->maxSegmentLength()
+                                                     : std::numeric_limits<double>::infinity();
+    bool foundSubGridIntersections = false;
 
     double subStartMD  = wellPath->fishbonesCollection()->startMD();
     double subStartTVD = RicWellPathExportMswCompletionsImpl::tvdFromMeasuredDepth( wellPath, subStartMD );
